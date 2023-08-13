@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { IAccordionItem } from "../../types/accordionItem";
+import { IAccordionItem } from "../../types";
 
 const AccordionItem = (props: IAccordionItem) => {
   const contentEl = useRef<HTMLDivElement>(null);

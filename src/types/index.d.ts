@@ -9,3 +9,9 @@ export type IAccordionItem = {
   handleToggle: (index: number) => void;
   faq: IFaq;
 };
+
+export type ICards = {
+  header: string;
+  image: string;
+  text: string;
+};
