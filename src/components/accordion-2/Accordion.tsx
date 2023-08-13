@@ -1,11 +1,6 @@
 import { useState } from "react";
-import image1 from "./1.jpg";
-import image2 from "./2.jpg";
-import image3 from "./3.jpg";
-import image4 from "./4.jpg";
-import image5 from "./5.jpg";
-import "./styles.css";
 import { cards } from "../../data";
+import "./styles.css";
 
 export const Accordion = () => {
   const [active, setActive] = useState(0);
