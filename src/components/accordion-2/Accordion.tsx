@@ -4,7 +4,6 @@ import "./styles.css";
 
 export const Accordion = () => {
   const [active, setActive] = useState(0);
-
   const handleToggle = (index: number) => setActive(index);
 
   return (
