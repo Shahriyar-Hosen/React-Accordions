@@ -24,7 +24,15 @@ const faqs = [
   },
 ];
 
-const AccordionItem = (props: any) => {
+const AccordionItem = (props: {
+  active: number | null | undefined;
+  handleToggle: (index: number) => void;
+  faq: {
+    id: number;
+    header: string;
+    text: string;
+  };
+}) => {
   const contentEl = useRef<HTMLDivElement>(null);
   const { handleToggle, active, faq } = props;
   const { header, id, text } = faq;
@@ -43,7 +51,7 @@ const AccordionItem = (props: any) => {
         className={`collapse ${active === id ? "show" : ""}`}
         style={
           active === id
-            ? { height: contentEl?.current?.scrollHeight! }
+            ? { height: contentEl?.current?.scrollHeight }
             : { height: "0px" }
         }
       >
@@ -54,9 +62,9 @@ const AccordionItem = (props: any) => {
 };
 
 export const Accordion = () => {
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState<number | null>();
 
-  const handleToggle = (index: any) => {
+  const handleToggle = (index: number) => {
     if (active === index) {
       setActive(null);
     } else {
