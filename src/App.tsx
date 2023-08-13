@@ -1,7 +1,5 @@
 import { Accordion } from "./components/accordion-2/Accordion";
 
-function App() {
-  return <Accordion />;
-}
+const App = () => <Accordion />;
 
 export default App;
