@@ -1,8 +1,8 @@
-import image1 from "../components/accordion-2/1.jpg";
-import image2 from "../components/accordion-2/2.jpg";
-import image3 from "../components/accordion-2/3.jpg";
-import image4 from "../components/accordion-2/4.jpg";
-import image5 from "../components/accordion-2/5.jpg";
+import image1 from "../components/accordion/1.jpg";
+import image2 from "../components/accordion/2.jpg";
+import image3 from "../components/accordion/3.jpg";
+import image4 from "../components/accordion/4.jpg";
+import image5 from "../components/accordion/5.jpg";
 import { ICards, IFaq } from "../types";
 
 export const faqs: IFaq[] = [

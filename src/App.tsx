@@ -1,4 +1,4 @@
-import { Accordion } from "./components/accordion-2/Accordion";
+import { Accordion } from "./components";
 
 const App = () => <Accordion />;
 
