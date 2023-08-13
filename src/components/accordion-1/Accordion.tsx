@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
+import AccordionItem from "./AccordionItem";
 import "./styles.css";
 
 const faqs = [
@@ -23,43 +24,6 @@ const faqs = [
     text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
   },
 ];
-
-const AccordionItem = (props: {
-  active: number | null | undefined;
-  handleToggle: (index: number) => void;
-  faq: {
-    id: number;
-    header: string;
-    text: string;
-  };
-}) => {
-  const contentEl = useRef<HTMLDivElement>(null);
-  const { handleToggle, active, faq } = props;
-  const { header, id, text } = faq;
-
-  return (
-    <div className="rc-accordion-card">
-      <header
-        className={active === id ? "active" : ""}
-        onClick={() => handleToggle(id)}
-      >
-        <h2>{header}</h2>
-        <span className="material-symbols-outlined">expand_more</span>
-      </header>
-      <div
-        ref={contentEl}
-        className={`collapse ${active === id ? "show" : ""}`}
-        style={
-          active === id
-            ? { height: contentEl?.current?.scrollHeight }
-            : { height: "0px" }
-        }
-      >
-        <p>{text}</p>
-      </div>
-    </div>
-  );
-};
 
 export const Accordion = () => {
   const [active, setActive] = useState<number | null>();
