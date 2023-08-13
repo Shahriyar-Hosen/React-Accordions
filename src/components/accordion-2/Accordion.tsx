@@ -5,34 +5,7 @@ import image3 from "./3.jpg";
 import image4 from "./4.jpg";
 import image5 from "./5.jpg";
 import "./styles.css";
-
-const cards = [
-  {
-    header: "Canada",
-    image: image2,
-    text: `Image description here`,
-  },
-  {
-    header: "Bali",
-    image: image1,
-    text: `Image description here`,
-  },
-  {
-    header: "Spain",
-    image: image3,
-    text: `Image description here`,
-  },
-  {
-    header: "Indonesia",
-    image: image4,
-    text: `Image description here`,
-  },
-  {
-    header: "South Africa",
-    image: image5,
-    text: `Image description here`,
-  },
-];
+import { cards } from "../../data";
 
 export const Accordion = () => {
   const [active, setActive] = useState(0);
